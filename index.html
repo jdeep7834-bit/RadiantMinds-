@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radiant Minds</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Animated Background -->
+<div class="background-blobs">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<header>
+    <h1>🌈 Dynamics of Happiness</h1>
+    <p>Play. Relax. Feel Lighter.</p>
+</header>
+
+<section class="games-grid">
+
+    <div class="game-card">
+        <div class="icon">🫧</div>
+        <h3>Bubble Pop</h3>
+        <p>Release stress by popping bubbles.</p>
+        <button onclick="openGame('bubbleGame')">Play</button>
+    </div>
+
+    <div class="game-card">
+        <div class="icon">🧘</div>
+        <h3>Breathing Rhythm</h3>
+        <p>Calm your mind with guided breathing.</p>
+        <button onclick="openGame('breathingGame')">Play</button>
+    </div>
+
+    <div class="game-card">
+        <div class="icon">☁️</div>
+        <h3>Cloud Catcher</h3>
+        <p>Catch peaceful clouds drifting by.</p>
+        <button onclick="openGame('cloudGame')">Play</button>
+    </div>
+
+    <div class="game-card">
+        <div class="icon">🎨</div>
+        <h3>Color Harmony</h3>
+        <p>Create soothing color art.</p>
+        <button onclick="openGame('colorGame')">Play</button>
+    </div>
+
+    <div class="game-card">
+        <div class="icon">🌿</div>
+        <h3>Zen Garden</h3>
+        <p>Draw relaxing patterns in the sand.</p>
+        <button onclick="openGame('zenGame')">Play</button>
+    </div>
+
+    <div class="game-card">
+        <div class="icon">😊</div>
+        <h3>Memory Match</h3>
+        <p>Match happy symbols and improve focus.</p>
+        <button onclick="openGame('memoryGame')">Play</button>
+    </div>
+
+</section>
+
+<!-- ================= Bubble Pop ================= -->
+
+<section id="bubbleGame" class="game-section hidden">
+
+    <div class="section-header">
+        <h2>🫧 Bubble Pop Relaxation</h2>
+        <button class="close-btn" onclick="closeGames()">✖</button>
+    </div>
+
+    <div class="score-panel">
+        Popped: <span id="bubbleScore">0</span>
+    </div>
+
+    <div id="bubbleContainer"></div>
+
+</section>
+
+<!-- ================= Breathing ================= -->
+
+<section id="breathingGame" class="game-section hidden">
+
+    <div class="section-header">
+        <h2>🧘 Breathing Rhythm</h2>
+        <button class="close-btn" onclick="closeGames()">✖</button>
+    </div>
+
+    <div class="breathing-container">
+
+        <div class="breathing-circle"></div>
+
+        <h2 id="breathText">Breathe In</h2>
+
+        <p>
+            Follow the circle and breathe slowly.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= Cloud Catcher ================= -->
+
+<section id="cloudGame" class="game-section hidden">
+
+    <div class="section-header">
+        <h2>☁️ Cloud Catcher</h2>
+        <button class="close-btn" onclick="closeGames()">✖</button>
+    </div>
+
+    <div class="score-panel">
+        Clouds Collected:
+        <span id="cloudScore">0</span>
+    </div>
+
+    <div id="cloudContainer"></div>
+
+</section>
+
+<!-- ================= Color Harmony ================= -->
+
+<section id="colorGame" class="game-section hidden">
+
+    <div class="section-header">
+        <h2>🎨 Color Harmony Painter</h2>
+        <button class="close-btn" onclick="closeGames()">✖</button>
+    </div>
+
+    <div class="color-tools">
+
+        <input type="color" id="colorPicker">
+
+        <button onclick="clearCanvas()">
+            Clear Canvas
+        </button>
+
+    </div>
+
+    <canvas id="paintCanvas"></canvas>
+
+</section>
+
+<!-- ================= Zen Garden ================= -->
+
+<section id="zenGame" class="game-section hidden">
+
+    <div class="section-header">
+        <h2>🌿 Zen Garden</h2>
+        <button class="close-btn" onclick="closeGames()">✖</button>
+    </div>
+
+    <p class="game-description">
+        Drag your mouse to create calming patterns.
+    </p>
+
+    <canvas id="zenCanvas"></canvas>
+
+</section>
+
+<!-- ================= Memory Match ================= -->
+
+<section id="memoryGame" class="game-section hidden">
+
+    <div class="section-header">
+        <h2>😊 Memory Match</h2>
+        <button class="close-btn" onclick="closeGames()">✖</button>
+    </div>
+
+    <div class="score-panel">
+        Matches:
+        <span id="memoryScore">0</span>
+    </div>
+
+    <div id="memoryBoard"></div>
+
+</section>
+
+<footer>
+    <p>Dynamics of Happiness • Interactive Wellness Project</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
